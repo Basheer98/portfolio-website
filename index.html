@@ -6,6 +6,7 @@
     <title>JobTrackPro - Futuristic Job Tracker</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white font-[Poppins]">
@@ -13,7 +14,10 @@
     <!-- Header Section -->
     <header class="h-screen flex items-center justify-center bg-gradient-to-br from-blue-700 to-purple-900 text-center">
         <div>
-            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-wider">JobTrackPro</h1>
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-wider">
+                <span id="typing-text" class="text-white"></span>
+                <span class="blinking-cursor">|</span>
+            </h1>
             <p class="text-lg md:text-2xl font-light mb-6">Futuristic Job Application Tracker with AI Automation</p>
             <a href="#features" class="bg-purple-600 hover:bg-purple-500 px-6 py-3 rounded-full text-white font-semibold transition-all duration-300">
                 Explore Features
@@ -25,7 +29,8 @@
     <section class="py-12 px-6 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-6 text-purple-400">About JobTrackPro</h2>
         <p class="max-w-4xl mx-auto text-gray-300 leading-relaxed">
-            JobTrackPro is your AI-powered assistant to manage job applications, schedule interviews, and track follow-ups seamlessly. Streamline your job search with a sleek, futuristic experience.
+            JobTrackPro is your AI-powered assistant to manage job applications, schedule interviews, and track follow-ups seamlessly. 
+            Streamline your job search with a sleek, futuristic experience and powerful features built for the modern job seeker.
         </p>
     </section>
 
@@ -62,7 +67,9 @@
     <section class="py-12 bg-gray-800 text-center">
         <h2 class="text-4xl font-bold mb-6 text-blue-400">Contact Us</h2>
         <p class="text-gray-300">For questions and feedback, email us at:</p>
-        <a href="mailto:basheermohd236@gmail.com" class="text-purple-300 underline text-lg font-semibold">basheermohd236@gmail.com</a>
+        <a href="mailto:basheermohd236@gmail.com" class="text-purple-300 underline text-lg font-semibold">
+            basheermohd236@gmail.com
+        </a>
     </section>
 
     <!-- Footer -->
@@ -70,5 +77,56 @@
         <p class="text-gray-400">&copy; 2024 JobTrackPro | Designed for the Future</p>
     </footer>
 
+    <!-- Typing Animation Script -->
+    <script>
+        const textArray = ["Track Your Job Applications", "Schedule Interviews", "Manage Follow-Ups", "Get AI-Powered Insights"];
+        const typingText = document.getElementById("typing-text");
+        const cursor = document.querySelector(".blinking-cursor");
+        let textIndex = 0;
+        let charIndex = 0;
+        let typingSpeed = 100;
+        let erasingSpeed = 50;
+        let delay = 1500;
+
+        function typeEffect() {
+            if (charIndex < textArray[textIndex].length) {
+                typingText.textContent += textArray[textIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeEffect, typingSpeed);
+            } else {
+                setTimeout(eraseEffect, delay);
+            }
+        }
+
+        function eraseEffect() {
+            if (charIndex > 0) {
+                typingText.textContent = textArray[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(eraseEffect, erasingSpeed);
+            } else {
+                textIndex = (textIndex + 1) % textArray.length;
+                setTimeout(typeEffect, typingSpeed);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(typeEffect, 1000);
+        });
+    </script>
+
+    <!-- Cursor Blink Style -->
+    <style>
+        .blinking-cursor {
+            font-weight: 300;
+            font-size: 2rem;
+            color: white;
+            animation: blink 0.7s step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to { visibility: hidden; }
+            50% { visibility: visible; }
+        }
+    </style>
 </body>
 </html>
