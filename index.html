@@ -4,76 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JobTrackPro - Futuristic Job Tracker</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white font-[Poppins]">
+
     <!-- Header Section -->
-    <header>
-        <div class="container">
-            <h1>JobTrackPro</h1>
-            <p>Track Your Job Applications with Ease and Precision</p>
-            <a href="#features" class="btn">Explore Features</a>
+    <header class="h-screen flex items-center justify-center bg-gradient-to-br from-blue-700 to-purple-900 text-center">
+        <div>
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-wider">JobTrackPro</h1>
+            <p class="text-lg md:text-2xl font-light mb-6">Futuristic Job Application Tracker with AI Automation</p>
+            <a href="#features" class="bg-purple-600 hover:bg-purple-500 px-6 py-3 rounded-full text-white font-semibold transition-all duration-300">
+                Explore Features
+            </a>
         </div>
     </header>
 
     <!-- About Section -->
-    <section id="about">
-        <div class="container glass-card">
-            <h2>About JobTrackPro</h2>
-            <p>
-                Your personal AI-powered job tracker. Manage applications, schedule interviews, and track follow-ups with ease.
-                Futuristic technology to streamline your job search process.
-            </p>
-        </div>
+    <section class="py-12 px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-purple-400">About JobTrackPro</h2>
+        <p class="max-w-4xl mx-auto text-gray-300 leading-relaxed">
+            JobTrackPro is your AI-powered assistant to manage job applications, schedule interviews, and track follow-ups seamlessly. Streamline your job search with a sleek, futuristic experience.
+        </p>
     </section>
 
     <!-- Features Section -->
-    <section id="features">
-        <div class="container">
-            <h2>Our Features</h2>
-            <div class="feature-grid">
-                <div class="feature-card glass-card">
-                    <h3>Gmail Integration</h3>
-                    <p>Auto-track job emails and interviews directly from Gmail.</p>
-                </div>
-                <div class="feature-card glass-card">
-                    <h3>Calendar Sync</h3>
-                    <p>Never miss an interview. Auto-schedule events with Google Calendar.</p>
-                </div>
-                <div class="feature-card glass-card">
-                    <h3>Real-Time Notifications</h3>
-                    <p>Receive instant updates for interviews, rejections, or follow-ups.</p>
-                </div>
-                <div class="feature-card glass-card">
-                    <h3>Insights & Analytics</h3>
-                    <p>Track your progress with AI-powered success analytics.</p>
-                </div>
+    <section id="features" class="py-16 bg-gray-800">
+        <h2 class="text-4xl font-bold text-center mb-12 text-blue-400">Our Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+                <h3 class="text-xl font-semibold mb-2 text-purple-300">Gmail Integration</h3>
+                <p class="text-gray-300">Automatically track job-related emails and interviews directly from Gmail.</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+                <h3 class="text-xl font-semibold mb-2 text-blue-300">Calendar Sync</h3>
+                <p class="text-gray-300">Never miss an interview. Auto-schedule events with Google Calendar.</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+                <h3 class="text-xl font-semibold mb-2 text-pink-300">Real-Time Notifications</h3>
+                <p class="text-gray-300">Get instant notifications about interviews, updates, or follow-ups.</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+                <h3 class="text-xl font-semibold mb-2 text-green-300">Analytics Dashboard</h3>
+                <p class="text-gray-300">Track your progress with AI-powered success analytics.</p>
             </div>
         </div>
     </section>
 
     <!-- Demo Section -->
-    <section id="demo">
-        <div class="container glass-card">
-            <h2>Prototype Demo</h2>
-            <p>Coming Soon! Experience the future of job tracking.</p>
-        </div>
+    <section class="py-12 text-center">
+        <h2 class="text-4xl font-bold mb-6 text-purple-400">Prototype Demo</h2>
+        <p class="text-gray-300">Coming Soon! Experience the future of job tracking.</p>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <div class="container glass-card">
-            <h2>Contact Us</h2>
-            <p>For questions and feedback, email us at: <a href="mailto:basheermohd236@gmail.com">basheermohd236@gmail.com</a></p>
-        </div>
+    <section class="py-12 bg-gray-800 text-center">
+        <h2 class="text-4xl font-bold mb-6 text-blue-400">Contact Us</h2>
+        <p class="text-gray-300">For questions and feedback, email us at:</p>
+        <a href="mailto:basheermohd236@gmail.com" class="text-purple-300 underline text-lg font-semibold">basheermohd236@gmail.com</a>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 JobTrackPro | Designed for the future.</p>
-        </div>
+    <footer class="py-4 bg-gray-900 text-center">
+        <p class="text-gray-400">&copy; 2024 JobTrackPro | Designed for the Future</p>
     </footer>
+
 </body>
 </html>
